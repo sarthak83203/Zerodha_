@@ -1,7 +1,39 @@
 import React from 'react';
+import OpenAccount from '../OpenAccount';
 function Hero() {
     return ( 
-        <h1>Hero</h1>
+         <div className='container border-bottom'>
+            <div className='row p-5 border-bottom text-center fs-6'>
+                <h1>Pricing</h1>
+                <h3 className='text-muted mt-3 fs-5'>Free equity investment and flat ₹20 traday and F&O trades</h3>
+            </div>
+            <div className='row p-5 mt-5'>
+                <div className='col-4 p-5'>
+                    <img src='media/images/pricingEquity.svg'/>
+                    <h1 className='text-center fs-3'>Free Equity delivery</h1>
+                    <p className='text-center text-muted'>All equity delivery investments (NSE, BSE), are absolutely free — ₹ 0 brokerage. </p>
+
+                </div>
+                <div className='col-4 p-5'>
+                    <img src='media/images/intradayTrades.svg'/>
+                    <h1 className='text-center fs-3'>Intraday and F&O trades</h1>
+                    <p className='text-center text-muted'>Flat ₹ 20 or 0.03% (whichever is lower) per executed order on intraday trades across equity, currency, and commodity trades. Flat ₹20 on all option trades.  </p>
+
+                    
+                </div>
+                <div className='col-4 p-5'>
+                    <img src='media/images/pricingEquity.svg'/>
+                    <h1 className='text-center fs-3'>Free direct MF</h1>
+                    <p className='text-center text-muted'>All direct mutual fund investments are absolutely free — ₹ 0 commissions & DP charges. </p>
+
+                    
+                    
+                </div>
+                 <OpenAccount/>
+            </div>
+
+            </div>
+    
      );
 }
 
