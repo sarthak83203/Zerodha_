@@ -14,3 +14,4 @@ root.render( //it should happen within the components
     </BrowserRouter>
   </React.StrictMode>
 );
+//mongodb+srv://sarthakshinde2006_db_user:6ufSPA7EXEcLsHzl@zerodha-stock.c1hrav5.mongodb.net/?appName=Zerodha-Stock
