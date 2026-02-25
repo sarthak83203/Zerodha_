@@ -716,33 +716,24 @@ hr {
 
 .actions {
   position: absolute;
-  right: 10px;          /* Move to right side */
+  right: 10px;
   top: 50%;
   transform: translateY(-50%);
   display: none;
   align-items: center;
-  gap: 8px;
-  background: #fff;     /* So it looks clean */
-  padding-left: 10px;   /* Optional spacing */
+  justify-content: flex-end;
+  gap: 6px;              /* spacing between buttons */
+  background: #fff;
+  padding-left: 10px;
+  flex-direction: row;   /* force horizontal */
 }
 
-.actions span button {
-  width: 32px;      /* same as icon box */
-  height: 32px;
-  border-radius: 4px;
+
+.actions button {
+  width: 34px;
+  height: 34px;
   padding: 0;
   display: flex;
-  align-items: center;
-  justify-content: center;
-  font-size: 0.7rem;   /* slightly smaller text */
-  font-weight: 600;
-  cursor: pointer;
-}
-.actions button {
-  width: 34px !important;
-  height: 34px !important;
-  padding: 0 !important;
-  display: flex !important;
   align-items: center;
   justify-content: center;
   border-radius: 4px;
@@ -832,6 +823,9 @@ hr {
 .list li:hover > .actions {
   display: flex;
   cursor: move;
+}
+.buy{
+  cursor: pointer;
 }
 
 /* TODO */

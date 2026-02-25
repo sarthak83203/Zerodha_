@@ -1,6 +1,8 @@
-import React, { useState } from "react";
+import React, { useState, useContext } from "react";
 import { Tooltip, Grow } from "@mui/material";
+import GeneralContext from "./GeneralContext";
 import { watchlist } from "../data/data";
+
 import {
   BarChartOutlined,
   KeyboardArrowDown,
@@ -58,29 +60,59 @@ const WatchListItem = ({ stock }) => {
         </div>
       </div>
 
-      {showActions && <WatchListActions />}
+      {showActions && <WatchListActions uid={stock.name} />}
     </li>
   );
 };
 
-const WatchListActions = () => {
+const WatchListActions = ({ uid }) => {
+  const generalContext = useContext(GeneralContext);
+
+  const handleBuyClick = () => {
+    generalContext.openBuyWindow(uid);
+  };
+
   return (
     <div className="actions">
-      <Tooltip title="Buy" placement="top" arrow TransitionComponent={Grow}>
-        <button className="buy">Buy</button>
+      <Tooltip
+        title="Buy"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}
+      >
+        <button className="buy" onClick={handleBuyClick}>
+          Buy
+        </button>
       </Tooltip>
 
-      <Tooltip title="Sell" placement="top" arrow TransitionComponent={Grow}>
-        <button className="sell">Sell</button>
+      <Tooltip
+        title="Sell"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}
+      >
+        <button className="sell">
+          Sell
+        </button>
       </Tooltip>
 
-      <Tooltip title="Charts" placement="top" arrow TransitionComponent={Grow}>
+      <Tooltip
+        title="Charts"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}
+      >
         <button className="action">
           <BarChartOutlined className="icon" />
         </button>
       </Tooltip>
 
-      <Tooltip title="More" placement="top" arrow TransitionComponent={Grow}>
+      <Tooltip
+        title="More"
+        placement="top"
+        arrow
+        TransitionComponent={Grow}
+      >
         <button className="action">
           <MoreHoriz className="icon" />
         </button>
